@@ -1,7 +1,106 @@
+#SPA
+voir la doc :https://laravel-news.com/using-vue-router-laravel
+
 se rendre dans le dossier puis lancer
 
 php artisan serve --port=8080
 
+et
+
+npm run watch
+
 projet accessible à l'url
 
 http://127.0.0.1:8080
+
+
+### git ###
+
+#initialiser un projet :
+git init
+cela ajoute un dossier .git au projet
+
+#configurer nom, mail
+
+git config --global user.email "david.daoduy@gmail.com"
+
+git config --global user.name "davidD"
+
+git config --global color.ui true
+
+#Statut de notre projet
+
+git status
+
+#Ajouter le tracking sur un fichier
+(ajoute le fichier à la liste de ceux à prendre en compte pour le prochain commit : zone de staging)
+
+git add index.html
+
+git add --all
+git add -A (pour stager tous les fichiers)
+git add "*.html" (stage tous les fichiers html)
+
+#Commit
+
+git commit -m "Mon premier commit"
+
+#IGNORER DES FICHIER
+
+créer un fichier .gitignore et l'éditer
+mentionner un fichier à ignorer par ligne
+
+*.tmp
+log.txt
+
+#Voir les commits
+
+git log
+git log --oneline
+
+git log -p index.html (liste des commit pour un fichier spécifié)
+
+#différence entre les fichiers
+Voir la différence entre les fichiers après un commit
+
+git diff
+
+#Lister les dépots distants
+
+git remote -v
+
+#Ajouter un remote
+
+git remote add origin https://github.com/dadou6946/Laravel-Vuejs-SPA.git
+avec origine le nom du remote et ensuite adresse ssh, répertoire réseau...
+
+#Ajouter les modifications
+
+git push origin master
+avec origin le nom du remote et master  le nom de la branche
+
+#lister les branches
+git branch -r
+
+#récupère les modifications d'un remote
+
+git pull origin master
+
+#Clonage
+
+git clone chemindudossierouurl nomdudossier
+
+on peut ensuite faire des commit et les envoyer avec git add -A, git commit -m "nomcommit" puis git push origin master ...
+
+Si dépot distant en avance:
+récupérer ce q'il y a en avance avec
+git pull origin master
+
+puis push
+
+Ou plus proprement
+
+git pull --rebase origin master (ajoute un commit après un autre en avance sur la branche distante)
+
+
+
