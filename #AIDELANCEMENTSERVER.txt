@@ -1,0 +1,7 @@
+se rendre dans le dossier puis lancer
+
+php artisan serve --port=8080
+
+projet accessible à l'url
+
+http://127.0.0.1:8080
